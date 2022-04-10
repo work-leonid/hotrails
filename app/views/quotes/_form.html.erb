@@ -1,0 +1,10 @@
+<%= simple_form_for quote, html: { class: "space-y-5" } do |f| %>
+  <% if quote.errors.any? %>
+    <div class="error-message">
+      <%= quote.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.submit class: "bg-orange-600 text-white px-5 py-2 text-xl inline-block" %>
+<% end %>

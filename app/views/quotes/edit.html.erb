@@ -1,0 +1,11 @@
+<main class="container mx-auto">
+  <%= link_to sanitize("&larr; Back to quotes"), quote_path(@quote) %>
+
+  <header class="">
+    <h1>Edit quote</h1>
+  </header>
+
+  <%= turbo_frame_tag @quote do %>
+    <%= render "form", quote: @quote %>
+  <% end %>
+</main>

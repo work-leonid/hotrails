@@ -1,0 +1,10 @@
+<main class="container mx-auto mt-20">
+
+
+  <header class="flex gap-5 items-center my-10">
+    <%= link_to sanitize("&larr; Back to quotes"), quotes_path %>
+    <h1 class="text-3xl">New quote</h1>
+  </header>
+
+  <%= render "form", quote: @quote %>
+</main>

@@ -1,0 +1,10 @@
+<main class="container mx-auto mt-20">
+  <%= turbo_frame_tag "first_turbo_frame" do %>
+    <header class="flex justify-between">
+      <h1 class="text-3xl">Quotes</h1>
+      <%= link_to "New quote", new_quote_path, class: 'text-orange-500' %>
+    </header>
+  <% end %>
+
+  <%= render @quotes %>
+</main>
